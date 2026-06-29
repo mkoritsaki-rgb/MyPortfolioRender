@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #0f172a;       /* Βαθύ μπλε για το φόντο */
+    --canvas-bg: #020617;      /* Σχεδόν μαύρο-μπλε για το εσωτερικό του παιχνιδιού */
+    --primary-color: #38bdf8;  /* Κομψό γαλάζιο για τους τίτλους */
+    --text-color: #f8fafc;     /* Απαλό λευκό για τα κείμενα */
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --border-glow: rgba(56, 189, 248, 0.2);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+.game-container { /* Κεντρικό Κουτί (Κονσόλα) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+
+.score-board { /* Πίνακας Σκορ */
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.score-box {
+    background: rgba(2, 6, 23, 0.6);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--glass-border);
+}
+
+#currentScore { color: #10b981; }
+#highScore { color: #f59e0b; }
+
+#gameCanvas {
+    background-color: var(--canvas-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
+                0 0 40px var(--border-glow);
+}
+
+.controls-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.controls-hint .row {
+    display: flex;
+    gap: 5px;
+}
+
+.key {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: #94a3b8;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 450px) { /* Ρυθμίσεις για  Κινητά */
+    .game-container {
+        padding: 15px;
+        width: 90%; /* Το κουτί πιάνει το 90% της οθόνης */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Μικραίνει λίγο ο τίτλος */
+    }
+
+    #gameCanvas {
+        width: 100%;     /* Το canvas μικραίνει για να χωράει στην οθόνη */
+        height: auto;    /* Διατηρεί τις αναλογίες του */
+        max-width: 320px; /* Δεν θα μικρύνει κάτω από αυτό το όριο */
+    }
+
+    .key {
+        width: 45px;     /* Μεγαλώνουμε τα κουμπιά για να πατιούνται εύκολα με το δάχτυλο */
+        height: 45px;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}

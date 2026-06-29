@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title>Find the Movie</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    min-height: 100vh; /* Εξασφαλίζει ότι το gradient καλύπτει όλη την οθόνη/iframe */
+    margin: 0;         /* Αφαιρεί τα default περιθώρια του browser */
+    padding: 20px;
+}
+
+form {
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    width: min(300px, 90%); /* Προσαρμόζεται αυτόματα και σε κινητά */
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff758c; /* Ένα ωραίο coral/ροζ που ταιριάζει με το μωβ */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    width: min(320px, 90%);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff7e5f;
+}
+
+.movieCard {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Για υποστήριξη σε Safari */
+    padding: 20px;
+    margin-top: 20px;
+    width: min(340px, 90%); /* Responsive χωρίς να χρειάζεται πολλά media queries */
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    box-sizing: border-box; /* Κρατάει το padding μέσα στο width */
+}
+
+.movieCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Ευθυγράμμιση κειμένων μέσα στην κάρτα */
+.movieCard h2 {
+    margin: 15px 0 10px 0;
+}
+
+.movieCard p {
+    text-align: left;
+    margin: 8px 0;
+}
+
+/* Αν χρειαστείς media query για μικροδιορθώσεις */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎬 Find the Movie</h1>
+
+<form>
+  <input name="movie" placeholder="Enter movie name">
+  <button type="submit">Search</button>
+</form>
+
+<div class="movieCard" style="display: none;"></div>
+
+<button id="translateBtn" style="display:none;">Translate Plot 🇬🇷</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const movieInput = document.querySelector('[name="movie"]');
+const form = document.querySelector("form");
+const movieCard = document.querySelector(".movieCard");
+const translateBtn = document.querySelector("#translateBtn");
+
+const apiKey = "bbfd82ad";
+
+let currentPlot = "";
+let plotParagraph;
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const movieName = movieInput.value.trim();
+    if (!movieName) return;
+
+    // ΔΙΟΡΘΩΣΗ: Προσθήκη HTTPS αντί για HTTP
+    fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(movieName)}&apikey=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+
+            console.log("API DATA:", data);
+
+            movieCard.innerHTML = "";
+            movieCard.style.display = "block";
+
+            if (!data || data.Response === "False") {
+                movieCard.innerHTML = "<p>❌ Movie not found</p>";
+                translateBtn.style.display = "none";
+                return;
+            }
+
+            const posterUrl = (data.Poster && data.Poster !== "N/A")
+                ? data.Poster
+                : "https://via.placeholder.com/300x450?text=No+Image";
+
+            const plotText = (data.Plot && data.Plot !== "N/A")
+                ? data.Plot
+                : "No description available";
+
+            movieCard.innerHTML = `
+                <img src="${posterUrl}" alt="${data.Title} Poster">
+                <h2>${data.Title}</h2>
+                <div class="info">
+                    <p><b>Year:</b> ${data.Year}</p>
+                    <p><b>Rating:</b> ⭐ ${data.imdbRating}</p>
+                    <p><b>Genre:</b> ${data.Genre}</p>
+                    <p id="plot"><b>Plot:</b> ${plotText}</p>
+                </div>
+            `;
+
+            currentPlot = plotText;
+            plotParagraph = document.querySelector("#plot");
+
+            translateBtn.style.display = "block";
+        })
+        .catch(err => {
+            console.error("Error fetching data:", err);
+            movieCard.innerHTML = "<p>❌ Connection error. Try again.</p>";
+        });
+});
+
+translateBtn.addEventListener("click", () => {
+    if (!currentPlot) return;
+
+    fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(currentPlot)}&langpair=en|el`)
+        .then(res => res.json())
+        .then(data => {
+            if(data.responseData) {
+                plotParagraph.innerHTML = "<b>Plot:</b> " + data.responseData.translatedText;
+            }
+        });
+});
+
+});
+</script>
+
+</body>
+</html>
