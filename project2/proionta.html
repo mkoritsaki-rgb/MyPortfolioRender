@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<title> Funko Planet </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- για να προσαρμοστεί στο κινητό -->
+<script src="script1.js"></script>
+<link rel="stylesheet" href="style.css"> <!--με αυτή τη σειρά κώδικα θα συνδεθεί το αρχείο της html με το αρχείο css-->
+</head>
+<body class="proionta-page">
+<header> <!-- με αυτή την ετικέτα δηλώνεται η επικεφαλίδα -->
+<nav> <!-- με αυτή τη ετικέτα ομαδοποιώ τα links της πλοήγησης και είναι βοηθητικό για το SEO της ιστοσελίδας -->
+ <div class="owner">
+    <a href="../index.html">Μαίρη Κάντα</a>
+  </div>  
+<div class="logo"> Funko Planet </div>
+<ul>
+<li> <a href="index.html"> Αρχική </a></li>
+<li> <a href="i_istoria_ton_funkopop.html"> Η ιστορία των Funko Pop </a> </li>
+<li> <a href="proionta.html"> Προϊόντα </a> </li>
+<li><a href="game.php"> Παιχνίδι</a></li>
+<li> <a href="kalathi.php"> Καλάθι </a></li>
+
+</ul>	
+</nav></header>
+<h1> Τα Funko Pop μας </h1><br>
+<div> 
+<h3>Joey Tribbiani</h3>
+<img src="Joey_Tribbiani.jpg"width="200"height="200">
+<p> 15€ </p>
+<button onclick="addToCart('Joey Tribbiani',15)"> <!-- Μόλις ο χρήστης πατήσει το κουμπί η JavaScript θα κάνει μία function -->
+Προσθήκη
+</button>
+</div> <br><br>
+<h3> Goofy </h3>
+<img src="Goofy.jpg"width="200"height="200">
+<p> 18€ </p>
+<button onclick="addToCart('Goofy', 18)"> 
+Προσθήκη
+</button>
+</div> <br> <br>
+<h3> Mary Poppins </h3>
+<img src="Marry_Poppins.jpg"width="200"height="200">
+<p> 30€ </p>
+<button onclick="addToCart('Mary Poppins',30)">
+Προσθήκη
+</button>
+</div><br><br>
+<h3> Smurfette </h3>
+<img src="Smurfette.jpg"width="200"height="200">
+<p> 20€ </p>
+<button onclick="addToCart('Smurfette',20)"> 
+Προσθήκη
+</button>
+</div><br><br>
+<h3> Care A Lot Bear </h3>
+<img src="Care_bear.jpg"width="200"height="200">
+<p> 15€ </p>
+<button onclick="addToCart('Care A Lot Bear',15)">
+Προσθήκη
+</button>
+</div> <br> <br>
+<h3> Scooby Doo </h3>
+<img src="scooby_doo.jpeg"width="200"height="200">
+<p> 15€ </p>
+<button onclick="addToCart('Scooby Doo', 15)">
+Προσθήκη
+</button>
+</div> <br> <br>
+<div class="game-cta">
+    <h2>🎁 Κέρδισε έκπτωση</h2>
+    <p>Παίξε το Funko Game και πάρε κουπόνι -15%</p>
+    <a href="game.php">
+        <button>Παίξε τώρα</button>
+    </a>
+</div>
+<footer> <!-- Αυτή η ετικέτα είναι για το κείμενο που θα υπάρχει στο κάτω μέρος της ιστοσελίδας -->
+<div class="footer-content">
+<p> &#64; 2026 Funko Planet </p>
+<p> Επικοινωνία: funkoplanet@gmail.com </p>
+ <p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>   
+</div> 
+</footer>
+</body>
+</html>

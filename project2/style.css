@@ -1,0 +1,185 @@
+* { /* Mε το * θα εφαρμοστούν τα παρακάτω σε όλα τα στοιχεία της ιστοσελίδας */
+margin:0; /* αυτή η ετικέτα αφαιρεί τα εξωτερικά περιθώρια */
+padding:0; /* αυτή η ετικέτα αφαιρεί τα εσωτερικά περιθώρια */
+box-sizing:border-box; /* παραμένει σταθερό το πλάτος κάθε στοιχείου */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+nav {
+	display:flex;/* για να μπουν τα στοιχεία σε οριζόντια σειρά */
+	justify-content:space-between; /* "απλώνει" τα στοιχεία έτσι ώστε το πρώτο να πάει αριστερά και το τελευταίο δεξιά */
+	align-items: center; /* για να μπουν όλα τα στοιχεία στο ίδιο ύψος */
+	padding:20px 10%; /* προσθέτει εσωτερικό χώρο γύρω από το nav */
+	background-color: #66b2ff;
+	color: white;
+}
+ nav ul {
+	 list-style: none; /* το πρόσθεσα για να αφαιρεθούν τα bullets */
+	 display:flex;
+	 gap: 20px; /* για να μπει ένα κενό ανάμεσα στα στοιχεία */
+ }
+ 
+ nav a {
+	 text-decoration: none;
+	 color:#0052CC;
+	 font-weight: bold;
+ }
+	 
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url("logo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-weight: bold;
+    padding: 50px;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.55);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+#hero h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
+}
+
+#hero p {
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+}
+
+	.game-cta {
+        text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    width: 80%;
+    background: #eaf4ff;
+    color: #1f2d3d;
+    border-radius: 16px;
+    border: 1px solid #cfe6ff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+
+footer {
+	background-color: #66b2ff;
+	color: white;
+	text-align:center;
+	padding: 30px 10%;
+}
+
+.i_istoria_ton_funkopop-page {
+background: linear-gradient(135deg, #4DA8FF 0%, #8FD3FF 30%, #FFF7B0 65%, #FFD93D 100%);
+	color:black;
+	text-align:center;
+}
+
+.proionta-page {
+	background: linear-gradient(135deg, #4DA8FF 0%, #8FD3FF 30%, #FFF7B0 65%, #FFD93D 100%);
+	color:black;
+	text-align:center;
+}
+
+.game-page {
+    background: #111;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+.game-box {
+    background: #222;
+    padding: 20px;
+    width: 60%;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.game-input {
+    padding: 10px;
+    font-size: 18px;
+    width: 250px;
+}
+
+.game-button {
+    padding: 10px 20px;
+    background: lime;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+@media (max-width: 1024px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+    }
+
+    .game-box {
+        width: 80%;
+    }
+}
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #hero {
+        padding: 20px;
+        background-position: center;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 20px 15px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .game-box {
+        width: 95%;
+    }
+
+    .game-cta {
+        width: 95%;
+    }
+}

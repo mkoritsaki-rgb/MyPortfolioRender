@@ -1,0 +1,103 @@
+<!DOCTYPE.html>
+<html lang="el"> <!--πρόσθεσα το lang="el" για να εμφανίζεται σωστά στο φυλλομετρητή η ελληνική γλώσσα -->
+<head> 
+<title> Το ΒιβλιοΚαταφύγιο </title>
+<meta charset="UTF-8"> <!-- το πρόσθεσα για να εμφανίζει σωστά τα γράμματα ο φυλλομετρητής-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- για να προσαρμοστεί στο κινητό -->
+<link rel="stylesheet" href="style.css"> <!--με αυτή τη σειρά κώδικα θα συνδεθεί το αρχείο της html με το αρχείο css-->
+</head>
+<body>
+
+<header> <!-- με αυτή την ετικέτα δηλώνεται η επικεφαλίδα-->
+<nav> <!-- με αυτή τη ετικέτα ομαδοποιώ τα links της πλοήγησης και είναι βοηθητικό για το SEO της ιστοσελίδας -->
+<div class="logo"> Το ΒιβλιοΚαταφύγιο </div> 
+  </div>
+  <div class="owner">
+    <a href="../index.html">Μαίρη Κάντα</a>
+  </div>
+<ul>
+<li> <a href="index.html"> Αρχική </a></li>
+<li> <a href="vivlia_gia_mikroys_anagnostes.html"> Βιβλία για μικρούς αναγνώστες </a> </li>
+<li> <a href="vivlia_gia_enhlikes.html"> Βιβλία για ενήλικες </a></li>
+<li> <a href="arthra.html"> Άρθρα </a> </li>
+</ul>
+</nav></header>
+<section id="hero"> <!--πρόσθεσα αυτή την ετικέτα για να δημιουργήσω ένα μεγάλο κομμάτι κειμένο στο κέντρο της σελίδας-->
+<div class="hero-content">
+<h1> <b> Καλώς ήρθες στο ΒιβλιοΚαταφύγιο! </b> </h1>
+<p> <b> <br> <br> <br> Εδώ δεν έχουμε απλά βιβλία, αλλά ιστορίες που γίνονται συνοδοιπόροι σε κάθε στιγμή της ζωής σου. <br>
+ Εδώ οι σελίδες δεν μένουν στοιβαγμένες απλά σε ράφια, ούτε σκονίζονται. Αναπνέουν, ζωντανεύουν και σε <br>
+ προσκαλούν να χαθείς μέσα τους.<br> </p>
+ <p> Το online βιβλιοπωλείο "ΒιβλιοΚαταφύγιο" είναι μια μικρή "φωλιά" για όσους πιστεύουν πως τα βιβλία <br>
+ δεν διαβάζονται απλώς, αλλά σε αλλάζουν. </b> </p>
+</div></section>
+<hr> <!-- με αυτή τη ετικέτα, μπαίνει μια γραμμή στο site.-->
+<h2> Πόσο πολύ αγαπάς τα βιβλία; Δείξτ΄το, απαντώντας στις παρακάτω ερωτήσεις! </h2>
+<div class="hero-content2">
+<br>
+<p> <b> Ένας τυχερός, μετά από κλήρωση, θα αποκτήσει εντελώς δωρεάν ένα βιβλίο της επιλογής του </b> </p> 
+<br>
+<form action="quiz.php"method="post"> <!--Σε αυτό το σημείο θα σταλθούν τα δεδομένα απο το αρχείο της html στο αρχείο της php -->
+<p> 1. Τι είναι η Μαίρη Πόππινς στο ομότιτλο βιβλίο; </p>
+<input type="radio" name="q1" value="Α"> Νταντά με μαγικές ικανότητες <br> <!--Η ετικέτα radio επιτρέπει στον χρήστη 
+μία μόνο επιλογή, ενώ η ετικέτα value είναι η τιμή που θα πάρει το πρόγραμμα και δεν είναι ορατή στον χρήστη. -->
+<input type="radio" name="q1" value="Β"> Μία φίλη της οικογένειας <br>
+<input type="radio" name="q1" value="Γ"> Ένας παπαγάλος που μιλάει <br>
+<br>
+<p> 2. Ποιος είναι ο συγγραφέας του έργου "Η Αλίκη στη Χώρα των Θαυμάτων"; </p>
+<input type="radio" name="q2"value="Α"> Roald Dahl <br>
+<input type="radio" name="q2" value="Β"> Lewis Carroll <br>
+<input type="radio" name="q2" value="Γ"> J.M. Barrie <br>
+<br>
+<p> 3. Ποιο χαρακτηριστικό έχει η ηρωίδα Ματίλντα στο έργο του Roald Dahl; </p>
+<input type="radio" name="q3" value="Α"> Είναι αθλήτρια <br>
+<input type="radio" name="q3" value="Β"> Έχει τηλεκινητικές ικανότητες και μεγάλη ευφυΐα <br>
+<input type="radio" name="q3" value="Γ"> Ζει σε ένα φανταστικό κόσμο δίχως σχολεία <br>
+<br>
+<p> 4. Στο έργο του Ευγένιου Τριβιζά "Τα Τρία Μικρά Λυκάκια", ποιος είναι ο "αντίπαλος"; </p>
+<input type="radio" name="q4" value="Α"> Ο κακός λύκος <br>
+<input type="radio" name="q4" value="Β"> Το μεγάλο κακό γουρούνι <br>
+<input type="radio" name="q4" value="Γ"> Ο κυνηγός <br>
+<br>
+<p> 5. Πού διαδραματίζεται το "Καπλάνι της Βιτρίνας" της Άλκης Ζέη; </p>
+<input type="radio" name="q5" value="Α"> Στην Κρήτη <br>
+<input type="radio" name="q5" value="Β"> Στη Σάμο <br>
+<input type="radio" name="q5" value="Γ"> Στην Αθήνα <br>
+<br>
+<p> 6. Ποιο είναι το βασικό θέμα του βιβλίου "1984" του George Orwell; </p>
+<input type="radio" name="q6" value="Α"> Ένας ρομαντικός έρωτας σε ένα δυστοπικό κόσμο <br>
+<input type="radio" name="q6" value="Β"> Ο απόλυτος έλεγχος της εξουσίας και η απώλεια της ελευθερίας <br>
+<input type="radio" name="q6"value="Γ"> Η ζωή σε μία ουτοπική κοινωνία δίχως συγκρούσεις <br>
+<br>
+<p> 7. Ποιός είναι ο κεντρικός ήρωας στο "Έγκλημα και Τιμωρία"; </p>
+<input type="radio" name="q7" value="Α"> Ο Ντμίτρι Καραμάζοφ <br>
+<input type="radio" name="q7" value="Β"> Ο Ροντιόν Ρασκόλνικοφ <br>
+<input type="radio" name="q7" value="Γ"> Ο Ιβάν Τουργκένιεφ <br>
+<br>
+<p> 8. Ποιο είναι το βασικό θέμα της "Μεταμόρφωσης" του Κάφκα; </p>
+<input type="radio" name="q8" value="Α"> Η μετατροπή ενός ανθρώπου σε έντομο και η αποξένωση <br>
+<input type="radio" name="q8" value="Β"> Η πολιτική επανάσταση σε μία πόλη <br>
+<input type="radio" name="q8" value="Γ"> Η επιστροφή στην παιδική ηλικία <br>
+<br>
+<p> 9. Ποια είναι η βασική ηρωίδα στο "Περηφάνια και Προκατάληψη"; </p>
+<input type="radio" name="q9" value="Α"> H Elizabeth Bennet <br>
+<input type="radio" name="q9" value="Β"> Η Jane Eyre <br>
+<input type="radio" name="q9" value= "Γ"> H Emma Woodhouse <br>
+<br>
+<p> 10. Ποιο στοιχείο χαρακτηρίζει το έργο "Η Δίκη" του Κάφκα; </p>
+<input type="radio" name="q10" value="A"> Μία ξεκάθαρη δίκη με λογική διαδικασία <br>
+<input type="radio" name="q10" value="Β"> Ένα παράλογο, γραφειοκρατικό σύστημα δίχως εμφανές έγκλημα <br>
+<input type="radio" name="q10" value="Γ"> Μια ιστορία εγκλήματος με αστυνομική δράση <br>
+<input type="Submit" value="Υποβολή"> <br>
+</div>
+</form> 
+<footer> <!-- Αυτή η ετικέτα είναι για το κείμενο που θα υπάρχει στο κάτω μέρος της ιστοσελίδας -->
+<div class="footer-content">
+<p> &#64; 2026 ΒιβλιοΚαταφύγιο </p>
+<p> Επικοινωνία: vivliokatafygio@hotmail.com </p>
+<p> Δημιουργία: <a href="../index.html">Μαίρη Κάντα</a> </p>
+</div> 
+</footer>
+</body>
+</html>
+
