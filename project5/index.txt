@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<title> SpeakEasy Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">SpeakEasy Hub </div>
+<ul>
+<li><a href="index.html">Αρχική</a></li>
+ <li> <a href="lessons.html"> Μαθήματα </a></li>
+ <li> <a href="times.html"> Τιμές </a></li>
+ <li> <a href="epikinonia.html"> Επικοινωνία</a></li>
+ </ul>
+</nav></header>
+<section id="hero">
+<div class="hero-content">
+<h1> Μάθε ξένες γλώσσες Online </h1>
+<p> Σκέφτεσαι να ξεκινήσεις μαθήματα ξένων
+γλωσσών, αλλά δεν θέλεις να απομακρυνθείς από 
+το σπίτι; Ξεκίνα Online! Εύκολα & Γρήγορα!</br>
+Τα μαθήματα γίνονται από έμπειρους καθηγητές</p>
+<button> Άρχισε δωρεάν το πρώτο μάθημα </button>
+</div>
+</section>
+
+
+
+
+ <footer>
+ <div class="footer-content">
+ <p> @ 2026 SpeakEasy Hub </p>
+ <p> Email: speakeasyhub@hotmail.com </p>
+ </div>
+ </footer>
+
+</body>
+</html>

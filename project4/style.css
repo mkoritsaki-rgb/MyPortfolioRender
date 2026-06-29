@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.page-title {
+    color: yellow;
+    font-weight: bold;
+	
+}
+nav {
+	display:flex;
+	justify-content: space-between;
+align-items: center;
+padding: 20px 10%;
+background-color: green;
+}
+	nav ul {
+		list-style: none;
+		display: flex;
+		gap: 20px;
+	}
+	
+	nav a {
+		text-decoration: none;
+		color: #333;
+		font-weight: bold;
+	}
+	
+	#hero {
+		height: 90vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background: linear-gradient(0deg, #90EE90, #556B2F);
+		color:white;
+		font-weight: bold;
+	}
+	.hero-content h1 {
+		font-size: 48px;
+		margin-bottom: 20px;
+	}
+	.hero-content p {
+		margin-bottom: 30px;
+	}
+	.hero-content button {
+		padding: 12px 25px;
+		border: none; 
+		cursor: pointer;
+	}
+	 
+.ta_dentrospita_mas {
+	background:linear-gradient(180deg, #87CEEB, #40E0D0);
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+.ta_dentrospita{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+.p {
+	text-align: center;
+	color: #2E4A32;;
+	font-weight: bold;
+}
+.img {
+	display: block;
+	margin: 20px auto;
+	width: 100px;
+	height: 100px;
+}
+.oi_drasthriothtes {
+background: linear-gradient(135deg,#98FF98, #6699CC); 
+text-align: center;
+color: white;
+font-weight: bold;	
+}
+	
+.kostos {
+background: linear-gradient(180deg, #006400,#FFFFE0);
+text-align: center;
+color: white;
+font-weight: bold;
+}
+ .kostos img {
+	  width:200px;
+  height: auto;
+}
+.epikinonia {
+	background:linear-gradient(135deg, #98FB98,#50C878);
+	text-align:center;
+	color:white;
+	font-weight:bold;
+}
+.epikinonia img {
+	  width:500px;
+  height: auto;
+}
+	footer {
+		background-color: #222;
+		color: gold;
+		text-align: center;
+		padding: 30px 20%;
+	}

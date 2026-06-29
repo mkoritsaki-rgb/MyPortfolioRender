@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Επικοινωνία </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="epikinonia-page">
+<header>
+<nav>
+<div class="logo"> SpeakEasy Hub </div>
+<ul>
+<li> <a href="index.html"> Αρχική </a></li>
+<li> <a href="lessons.html"> Μαθήματα </a></li>
+<li> <a href="epikinonia.html"> Επικοινωνία </a></li>
+</ul>
+</nav>
+</header>
+<div id="epikinonia">
+<h1> Επικοινωνία </h1>
+<p> Μπορείτε να επικοινωνήσετε μαζί μας <br/>
+τηλεφωνικά στο 2104567446 ή μέσω
+email στο <br/>
+speakeasyhub@hotmail.com </p>
+</div>
+<footer>
+<p> © 2026 SpeakEasy Hub </p>
+</footer>
+</body>
+</html>
+
+
+
+

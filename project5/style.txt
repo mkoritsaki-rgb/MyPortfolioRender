@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+display:flex;
+align-items:center;
+padding:20px 10%;
+background-color:#D4AF37;
+}
+nav ul {
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav a {
+text-decoration:none;
+color:fuchsia;
+font-weight: bold;
+}
+#hero {
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	background-image: url("background-image.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+font-weight: 900;
+	color:black;
+}
+.hero-content h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+.hero-content p {
+	margin-bottom: 30px;
+}
+
+.hero-content button {
+	padding: 12px 25px;
+	border: none;
+	border-radius: 25px;
+	cursor:pointer;
+}
+.lessons-page {
+background: linear-gradient(135deg, #D4AF37, #FF00FF);
+}
+
+.times-page {
+	background: linear-gradient(135deg, #D4AF37, #FF00FF);
+}
+.epikinonia-page {
+background: linear-gradient(135deg, #D4AF37, #FF00FF);
+}
+	
+footer {
+background-color: #222;
+color:fuchsia;
+text-align:center;
+padding:20px 10%;
+}	
+	
+	
+	
+	

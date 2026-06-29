@@ -1,0 +1,109 @@
+<html>
+<head>
+<title> Τα μαθήματα της σχολής </title>
+<style>
+body {
+background-color:#800020;
+}
+.title {
+text-align:center;
+color: #F5F5F5;
+}
+.main-table {
+text-align:center;
+color: #F5F5F5;
+}
+.content {
+text-align:center;
+width: 400pt;
+}
+.img {
+width:200pt;
+height:200pt;
+}
+.mathimata {
+text-align:center;
+color: #F5F5F5;
+}
+.back-link {
+color:#F5F5F5;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<h1 class="title"> Τα μαθήματα της σχολής </h1>
+<hr>
+<table class="main-table"> 
+<tr>
+<td class="content">
+<img src="theatro2.jpg" class="img">
+<p> Τα μαθήματα θεάτρου που διάσκονται είναι τα ακόλουθα: </p>
+<ul class="mathimata">
+<li> Υποκριτική
+<ol> 
+<li> Υποκριτική Ι </li>
+<li> Υποκριτική ΙΙ </li>
+<li> Υποκριτική μπροστά στην κάμερα </li>
+<li> Αυτοσχεδιασμός </li> 
+<li> Σωματικό Θέατρο </li>
+</ol>
+</li>
+</ul>
+<ul class="mathimata">
+<li> Φωνή & Λόγος
+<ol>
+<li> Ορθοφωνία </li>
+<li> Αναπνοή και Στήριξη φωνής </li>
+<li> Ανάγνωση και απαγγελία </li>
+</ol>
+</li>
+</ul>
+<ul class="mathimata">
+<li> Θεατρική Γραφή 
+<ol> 
+<li> Θεατρική γραφή </li>
+<li> Δημιουργία χαρακτήρων </li>
+<li> Διάλογος στη σκηνή </li>
+<li> Διασκευή λογοτεχνικών έργων για το θέατρο </li>
+<li> Μονόλογοι </li>
+</ol>
+</li>
+</ul>
+<ul class="mathimata">
+<li> Άλλα μαθήματα 
+<ol>
+<li> Σκηνοθεσία θεάτρου </li>
+<li> Σκηνοθεσία τηλεόρασης </li>
+<li> Θεατρικό παιχνίδι </li>
+</ol>
+</li>
+</ul>
+<img src="xoros2.jpg" class="img">
+<ul class="mathimata">
+<li> Μαθήματα Χορού 
+<ol>
+
+<li> Κλασικό μπαλέτο </li>
+<li> Σύγχρονος χορός </li>
+<li> Jazz </li>
+<li> Hip Hop </li>
+<li> Latin </li>
+<li> Flamenco </li>
+</ol>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p align="right">
+<a href="arxiki.html" class="back-link"> Επιστροφή στην αρχική </a> </p>
+</body>
+</html>
+
+
+
+
+
+
+

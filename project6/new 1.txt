@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> StageVibe </title>
+</head>
+<body style="background-color:#800020;">
+<h1 style="text-align:center; color:#F5F5F5;"> StageVibe </h1>
+<br/> <br/>
+<table border="0" align="center">
+<tr>
+<td align="center" width=""400">
+<img src="xoros1.jpg" width="200" height="200">
+<p> "Για να χορέψετε πρέπει να ξεπεράσετε τον
+ εαυτό σας. Να γίνετε μεγαλύτεροι, πιο όμορφοι
+ πιο ισχυροί. Αυτή είναι η δύναμη, είναι η 
+ δόξα στη γη και είναι δική σας για να την
+ πάρετε"." <strong> <em> Στέισι Τούκι</em> </strong> </p> 
+ </td>
+ </tr>
+ <hr>
+ <tr>
+ <td align="center" width="400">
+ <img src="theatro1.jpg"width="200" height="200">
+ <p> "Θεωρώ το θέατρo την μεγαλύτερη απ’ όλες 
+ τις μορφές τέχνης, τον πιο άμεσο τρόπο με τον 
+ οποίο ένας άνθρωπος μπορεί να μοιραστεί με 
+ κάποιον άλλο την ουσία του να είσαι 
+ ανθρώπινο πλάσμα."<strong> <em> Oscar Wilde. </em> </strong> </p>
+ </td>
+ </tr>
+ <hr>
+ <tr>
+ 
